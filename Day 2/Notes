@@ -1,0 +1,32 @@
+In the realm of JavaScript, both the document and window objects play integral roles, representing different aspects of the browser environment. Understanding their differences is crucial for efficient manipulation of web content and interaction with the browser.
+
+The window Object:
+The window object represents the browser window or tab and serves as the global object in the browser's JavaScript environment. It encapsulates a vast array of properties and methods that control the browser's behavior and provide access to various functionalities.
+
+Key Characteristics:
+Global Scope: All global JavaScript objects, functions, and variables automatically become members of the window object.
+Browser Properties: It contains properties such as document, location, history, navigator, and more, enabling control over the browser environment.
+
+
+console.log(window.innerWidth); // Output: Current inner width of the browser window
+
+
+Timers and Events: Functions like setTimeout(), setInterval(), and event listeners are part of the window object, allowing manipulation of timers and event handling.
+The document Object:
+On the other hand, the document object represents the web page loaded into the browser window and provides access to the document's content, structure, and elements.
+
+Key Characteristics:
+DOM Interaction: It serves as an interface to interact with the Document Object Model (DOM), allowing access to elements and their manipulation.
+
+
+let heading = document.getElementById('main-heading');
+heading.textContent = 'New Heading'; // Changes the text content of an element with the ID 'main-heading'
+
+Element Selection: Methods like getElementById(), getElementsByClassName(), and querySelector() facilitate element selection and traversal within the document.
+
+Content Manipulation: Properties like textContent, innerHTML, and methods like createElement() and appendChild() enable the creation and modification of document content.
+
+Relationship between window and document:
+The window object encompasses the document object, making document a property of window. Hence, accessing document is equivalent to accessing window.document.
+
+console.log(window.document === document); // Output: true
